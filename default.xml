@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="weftspun" fetch="https://github.com/weftspun" />
+  <remote name="sinew-mocap" fetch="https://github.com/sinew-mocap" />
+  <remote name="v-sekai-fabric" fetch="https://github.com/v-sekai-fabric" />
+
+  <default sync-j="16" />
+
+  <!-- Corpus, and mesh latents.
+
+       The corpus again, and everything that turns an image into geometry: TRELLIS2 and
+       its VAE, P3SAM, Pixal3D, VoxHammer, and the embedders that index what they make.
+       
+       The corpus is shared rather than copied. Both goals render from the same assets and
+       both record into the same logbook, so a project that serves one and not the other is
+       the exception here.
+  -->
+
+  <project name="weftspun-studio" path="1-transport/weftspun-studio" remote="weftspun" revision="main" />
+  <project name="weftspun-usd-viewer" path="1-transport/weftspun-usd-viewer" remote="weftspun" revision="main" />
+  <project name="usd-viewer" path="1-transport/usd-viewer" remote="weftspun" revision="main" />
+  <project name="billboard-labels" path="1-transport/billboard-labels" remote="weftspun" revision="main" />
+  <project name="easy-diffusion-mcp" path="1-transport/easy-diffusion-mcp" remote="weftspun" revision="main" />
+  <project name="runpod-chat-tui" path="1-transport/runpod-chat-tui" remote="weftspun" revision="main" />
+  <project name="ex_mcp" path="1-transport/ex_mcp" remote="weftspun" revision="main" />
+  <project name="weftspun-character-taxonomy" path="2-contract/weftspun-character-taxonomy" remote="weftspun" revision="main" />
+  <project name="trellis2-mesh-vae-slang" path="2-contract/trellis2-mesh-vae-slang" remote="weftspun" revision="main" />
+  <project name="tensor-copy-cost-model" path="2-contract/tensor-copy-cost-model" remote="weftspun" revision="main" />
+  <project name="interactor-gemma4-composer" path="3-interactor/gemma4-composer" remote="weftspun" revision="main" />
+  <project name="interactor-qwen35-defiant" path="3-interactor/qwen35-defiant" remote="weftspun" revision="main" />
+  <project name="interactor-qwen-image-edit" path="3-interactor/qwen-image-edit" remote="weftspun" revision="main" />
+  <project name="interactor-krea2-turbo-text-to-image" path="3-interactor/krea2-turbo-text-to-image" remote="weftspun" revision="main" />
+  <project name="interactor-p3sam-mesh-segmentation" path="3-interactor/p3sam-mesh-segmentation" remote="weftspun" revision="main" />
+  <project name="interactor-trellis2-image-to-textured-mesh" path="3-interactor/trellis2-image-to-textured-mesh" remote="weftspun" revision="main" />
+  <project name="interactor-trellis2-image-mesh-painting" path="3-interactor/trellis2-image-mesh-painting" remote="weftspun" revision="main" />
+  <project name="interactor-pixal3d-image-to-textured-mesh" path="3-interactor/pixal3d-image-to-textured-mesh" remote="weftspun" revision="main" />
+  <project name="interactor-voxhammer-text-mesh-editing" path="3-interactor/voxhammer-text-mesh-editing" remote="weftspun" revision="main" />
+  <project name="interactor-voxhammer-image-mesh-editing" path="3-interactor/voxhammer-image-mesh-editing" remote="weftspun" revision="main" />
+  <project name="ufbx-to-openusd" path="3-interactor/ufbx-to-openusd" remote="weftspun" revision="main" />
+  <project name="cyclegan-style-transfer" path="3-interactor/cyclegan-style-transfer" remote="weftspun" revision="main" />
+  <project name="trellis2cpp" path="3-interactor/trellis2cpp" remote="weftspun" revision="main" />
+  <project name="trellis2-ex" path="3-interactor/trellis2-ex" remote="weftspun" revision="main" />
+  <project name="nx-ggml" path="3-interactor/nx-ggml" remote="weftspun" revision="main" />
+  <project name="bumblebee" path="3-interactor/bumblebee" remote="weftspun" revision="main" />
+  <project name="multimodal-semantic-ids" path="3-interactor/multimodal-semantic-ids" remote="weftspun" revision="main" />
+  <project name="unified-modal-embedder" path="3-interactor/unified-modal-embedder" remote="weftspun" revision="main" />
+  <project name="residual-fsq-recommender" path="3-interactor/residual-fsq-recommender" remote="weftspun" revision="main" />
+  <project name="elixir-holographic-reduced-representation" path="4-entities/elixir-holographic-reduced-representation" remote="weftspun" revision="main" />
+  <project name="logbook" path=".logbook" remote="weftspun" revision="main">
+    <linkfile src="CLAUDE.md" dest="CLAUDE.md" />
+    <linkfile src="CLAUDE.md" dest="AGENTS.md" />
+  </project>
+  <project name="request-for-discussion" path=".request_for_discussion" remote="weftspun" revision="main" />
+  <project name="tropes-removal-model" path=".tropes_removal_model" remote="weftspun" revision="main" />
+  <project name=".github" path=".github" remote="weftspun" revision="main" />
+  <project name="dataflow-coco-gemx" path="6-datasource/dataflow-coco-gemx" remote="weftspun" revision="main" />
+  <project name="versitygw-local" path="6-datasource/versitygw-local" remote="weftspun" revision="main" />
+  <project name="kenney-stage" path="6-datasource/kenney-stage" remote="weftspun" revision="main" />
+  <project name="quaternius-stage" path="6-datasource/quaternius-stage" remote="weftspun" revision="main" />
+  <project name="thebasemesh-stage" path="6-datasource/thebasemesh-stage" remote="weftspun" revision="main" />
+  <project name="easy-diffusion-traces" path="6-datasource/easy-diffusion-traces" remote="weftspun" revision="main" />
+  <project name="coco-ood-eval" path="6-datasource/coco-ood-eval" remote="weftspun" revision="main" />
+  <project name="datasource-foundationdb" path="6-datasource/foundationdb" remote="weftspun" revision="main" />
+  <project name="datasource-store" path="6-datasource/store" remote="weftspun" revision="main" />
+  <project name="weft-warp-burrito" path="7-service/weft-warp-burrito" remote="weftspun" revision="main" />
+
+</manifest>
