@@ -54,6 +54,9 @@
   <project name="request-for-discussion" path=".request_for_discussion" remote="weftspun" revision="main" />
   <project name="tropes-removal-model" path=".tropes_removal_model" remote="weftspun" revision="main" />
   <project name=".github" path=".github" remote="weftspun" revision="main" />
+  <!-- Scratch. Deny-all ignore, so a temporary file cannot be committed by accident;
+       a repository rather than a loose directory so `repo status` can see the space. -->
+  <project name="local" path=".local" remote="weftspun" revision="main" />
   <project name="dataflow-coco-gemx" path="6-datasource/dataflow-coco-gemx" remote="weftspun" revision="main" />
   <project name="versitygw-local" path="6-datasource/versitygw-local" remote="weftspun" revision="main" />
   <project name="kenney-stage" path="6-datasource/kenney-stage" remote="weftspun" revision="main" />
