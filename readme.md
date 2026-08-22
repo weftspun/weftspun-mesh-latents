@@ -5,7 +5,7 @@ geometry: TRELLIS2 and its VAE, P3SAM, Pixal3D, VoxHammer, and the embedders tha
 they make.
 
 ```
-repo init -u https://github.com/weftspun/weftspun-mesh-latents.git
+repo init -u https://github.com/weftspun/weftspun-mesh-latents.git -b main
 repo sync
 ```
 
